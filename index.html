@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Services Web App</title>
+
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+        <div class="row nav-container">
+            <img class="logo" src="image.png" alt="Laundry Logo">
+
+            <ul class="main-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#DN">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="username">USERNAME</div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="row hero">
+
+            <div class="hero-text">
+                <h1>
+                    Revitalize Your <br>
+                    Clothes with Expert <br>
+                    <span>Laundry Services!</span>
+                </h1>
+
+                <p>
+                    From premium dry cleaning to swift wash and fold, we deliver care and
+                    convenience. Schedule a pickup and rediscover the freshness of your
+                    clothes today!
+                </p>
+
+                <a href="#DN" class="hero-btn">📅 Book a service today!</a>
+            </div>
+
+            <div class="hero-img">
+                <img src="machine.jpg" alt="Washing Machine">
+            </div>
+        </div>
+
+        <div class="achive">
+            <h2>Our Achievements</h2>
+            <ul class="our-achive">
+                <li>15+<br> Laundry Services</li>
+                <li>240+<br> Happy Customers</li>
+                <li>2+<br> Years Experience</li>
+            </ul>
+        </div>
+    </section>
+</header>
+
+<section class="section-service" id="DN">
+
+    <div class="row service-header">
+        <h2>Our Services</h2>
+        <p class="service-text">
+            Click on the add to cart button to add the services to a cart
+        </p>
+    </div>
+
+    <div class="service-grid">
+
+        <div class="service-left">
+            <ul class="section-services">
+                <li class="service-list">Dry Cleaning <span>₹200</span><button class="btn">Add Item</button></li>
+                <li class="service-list">Wash & Fold <span>₹100</span><button class="btn">Add Item</button></li>
+                <li class="service-list">Ironing <span>₹30</span><button class="btn">Add Item</button></li>
+                <li class="service-list">Stain Removal <span>₹500</span><button class="btn">Add Item</button></li>
+                <li class="service-list">Leather Cleaning <span>₹999</span><button class="btn">Add Item</button></li>
+                <li class="service-list">Wedding Dress <span>₹2800</span><button class="btn">Add Item</button></li>
+            </ul>
+            
+        </div>
+
+        <div class="service-right">
+
+            <div class="cart-box">
+                <h3>Added Items</h3>
+                <ul class="cart-table">
+                    <li>S.No</li>
+                    <li>Service</li>
+                    <li>Price</li>
+                </ul>
+
+                <ul class="cart-items"></ul>
+
+                <div class="cart-total">
+                    <span>Total Amount</span>
+                    <strong>₹0.00</strong>
+                </div>
+            </div>
+
+            <div class="book-now">
+                <div class="book1-now">
+                    <h2>BOOK NOW</h2>
+                </div>
+
+                <form id="booking-form" class="contact-form">
+
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Your name" required>
+
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Your email" required>
+
+                    <label>Phone No</label>
+                    <input type="tel" name="phone" placeholder="0000000000" required>
+
+                    <button type="submit" class="book-btn">Book now</button>
+
+                    <p id="booking-msg" style="display:none; margin-top:10px; color:green; font-weight:600;">
+                        Thank you for booking the service. We will get back to you soon!
+                    </p>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+     <div class="service-footer">
+        <span class="service-note">
+            ① Add the items to the cart and book now
+        </span>
+    </div>
+
+</section>
+
+<section class="section-serve">
+    <div class="row">
+
+        <div class="col span_1_of_4 serve-box">
+            <div class="icon-box icon">
+                <img src="permium.png" alt="machine">
+            </div>
+            <h3>Premium Services</h3>
+            <p>
+                Elevate your wardrobe with our meticulous dry cleaning,
+                ensuring garments look fresh and new.
+            </p>
+        </div>
+
+        <div class="col span_1_of_4 serve-box">
+            <div class="icon-box">
+                <img src="support.png" alt="support">
+            </div>
+            <h3>Quick Support</h3>
+            <p>
+                We provide prompt assistance to ensure a smooth experience.
+            </p>
+        </div>
+
+        <div class="col span_1_of_4 serve-box">
+            <div class="icon-box">
+                <img src="hassle.webp" alt="Free image">
+            </div>
+            <h3>Hassle-Free Delivery</h3>
+            <p>
+                Enjoy convenient pickup and delivery services tailored to your schedule.
+            </p>
+        </div>
+
+          <div class="col span_1_of_4 serve-box">
+            <div class="icon-box">
+                <img src="free.jpg" alt="Free image">
+            </div>
+            <h3>Affordable Prices</h3>
+            <p>
+               Get premium laundry services at budget-friendly prices without compromise.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section-sub">
+    <div class="row">
+        <div class="col span_1_of_2">
+            <h1 class="h1">
+                subscribe to our newsletter
+            </h1>
+        </div>
+        <div class="form">
+            <form class="contact-form full">
+                <label>NAME :</label>
+                <input type="text" name="name" placeholder="your name">
+                <label>EMAIL :</label>
+                <input type="email" name="email" placeholder="your email">
+
+                 <button type="submit" class="book-btn btn">SUBCRIBE</button>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+<footer class="section-footer">
+    <div class="row">
+        <div class="col span_1_of_4 serve-box">
+            <div class="icon-box icon">
+                <img src="image.png" alt="logo">
+            </div>
+            <h3>About Us</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+        </div>
+
+        <div class="col span_1_of_4 serve-box">
+            
+    <div class="footer-links">
+    <h3>IMP LINKS</h3>
+    <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Refund Policy</a></li>
+    </ul>
+    </div>
+</div>
+     <div class="col span_1_of_4">
+           <div class="footer-links">
+             <h1>Contact Us</h1>
+            <ul>
+            <li>mail@site.com</li>
+            <li>+91 91234 56780</li>
+            </ul>
+           </div>
+    </div>
+    <div class="col span_1_of_4">
+        <div class="footer-follow">
+            <h2>FOLLOW US</h2>
+        </div>
+        <div class="footer-apps">
+             <ul class="social-links">
+                <li><ion-icon class="fb" name="logo-facebook"></ion-icon></li>
+                <li><ion-icon class="tw" name="logo-twitter"></ion-icon></li>
+                <li><ion-icon class="go" name="logo-google"></ion-icon></li>
+                <li><ion-icon class="insta" name="logo-instagram"></ion-icon></li>
+            </ul>
+        </div>
+
+    </div>
+ 
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("f_7KxPk-BgQC4QQZW");
+})();
+</script>
+
+<script>
+document.getElementById("booking-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_rfsg03v",
+        "template_nah236h",
+        this
+    ).then(function() {
+
+        document.getElementById("booking-msg").style.display = "block";
+        document.getElementById("booking-form").reset();
+
+    }, function(error) {
+        alert("Booking failed. Please try again.");
+        console.error(error);
+    });
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
