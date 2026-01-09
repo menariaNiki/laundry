@@ -13,26 +13,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btn.addEventListener("click", () => {
 
-            // ✅ Safe service name extraction
             const name = service.childNodes[0].nodeValue.trim();
-
-            // ✅ Safe price extraction
             const priceText = service.querySelector("span").innerText;
             const price = Number(priceText.replace("₹", ""));
 
-            addToCart(name, price);
+            if (btn.innerText === "Add Item") {
+                addToCart(name, price);
+                btn.innerText = "Remove";
+                btn.style.background = "#fee2e2";
+                btn.style.color = "#b91c1c";
+            } else {
+                removeFromCart(name);
+                btn.innerText = "Add Item";
+                btn.style.background = "#eef2ff";
+                btn.style.color = "#4f46e5";
+            }
         });
     });
 
     function addToCart(name, price) {
         const item = cart.find(i => i.name === name);
 
-        if (item) {
-            item.qty++;
-        } else {
-            cart.push({ name, price, qty: 1 });
+        if (!item) {
+            cart.push({ name, price });
         }
 
+        renderCart();
+    }
+
+    function removeFromCart(name) {
+        cart = cart.filter(item => item.name !== name);
         renderCart();
     }
 
@@ -41,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let total = 0;
 
         cart.forEach((item, index) => {
-            total += item.price * item.qty;
+            total += item.price;
 
             const li = document.createElement("li");
             li.style.display = "grid";
@@ -51,46 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             li.innerHTML = `
                 <span>${index + 1}</span>
-                <span>${item.name} × ${item.qty}</span>
-                <span>₹${item.price * item.qty}</span>
+                <span>${item.name}</span>
+                <span>₹${item.price}</span>
             `;
-
-            cartItems.appendChild(li);
-        });
-
-        totalAmountEl.innerText = `₹${total.toFixed(2)}`;
-    }
-
-    function removeFromCart(name) {
-        cart = cart.filter(item => item.name !== name);
-        renderCart();
-    }
-
-    // RENDER CART
-    function renderCart() {
-        cartItems.innerHTML = "";
-        let total = 0;
-
-        cart.forEach((item, index) => {
-            total += item.price * item.qty;
-
-            const li = document.createElement("li");
-            li.style.display = "grid";
-            li.style.gridTemplateColumns = "10% 40% 20% 30%";
-            li.style.padding = "8px 0";
-            li.style.borderBottom = "1px solid #eee";
-            li.style.alignItems = "center";
-
-            li.innerHTML = `
-                <span>${index + 1}</span>
-                <span>${item.name} × ${item.qty}</span>
-                <span>₹${item.price * item.qty}</span>
-                <button class="remove-btn">Remove</button>
-            `;
-
-            li.querySelector(".remove-btn").addEventListener("click", () => {
-                removeFromCart(item.name);
-            });
 
             cartItems.appendChild(li);
         });
